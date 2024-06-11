@@ -1,0 +1,15 @@
+{% if posts %}
+<ul>
+    {% for post in posts %}
+    <li>
+        <h2>{{ post.title }}</h2>
+        <p>{{ post.content }}</p>
+        <p>Posted by {{ post.author }} on {{ post.date_posted }}</p>
+    </li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No posts available.</p>
+{% endif %}
+
+
